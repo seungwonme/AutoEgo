@@ -17,7 +17,7 @@ export const metadata: Metadata = {
   description: "AutoEgo: 크리에이터의 지식이 24시간 일하는 곳.",
   openGraph: {
     title: "AutoEgo",
-    description: "AutoEgo: 크리에이터의 지식이 24시간 일하는 곳.",
+    description: "크리에이터의 지식이 24시간 일하는 곳.",
     images: [
       {
         url: "/thumbnail.png",
