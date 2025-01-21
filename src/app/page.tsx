@@ -40,13 +40,13 @@ export default function LandingPage() {
                 답변하는 개인화된 챗봇을 자동으로 생성합니다.
               </p>
             </div>
-            <div>
+            <div className="mt-8">
               <Button
                 size="lg"
-                className="text-xl bg-purple-600 hover:bg-purple-700 w-full pt-8 pb-8 duration-500 ease-in-out"
+                className="text-xl bg-purple-600 hover:bg-purple-700 w-full pt-8 pb-8 duration-500 ease-in-out font-bold"
               >
                 <Link href={"https://bit.ly/3PJKpnA"}>
-                  지금 커피챗 예약하기
+                  지금 바로 커피챗 예약하기
                 </Link>
               </Button>
             </div>
@@ -221,8 +221,8 @@ export default function LandingPage() {
 
       {/* CTA Section */}
       <section className="container px-4 py-24 mx-auto">
-        <Card className="bg-gradient-to-r from-purple-900 to-pink-900 border-0">
-          <CardContent className="p-12 text-center space-y-6">
+        <Card className="bg-gradient-to-r from-purple-900 to-pink-900 border-0 flex items-center justify-center">
+          <CardContent className="p-12 text-center space-y-6 max-w-xl">
             <h2 className="text-3xl lg:text-5xl font-bold text-white">
               지금 바로 시작하세요
             </h2>
@@ -231,9 +231,9 @@ export default function LandingPage() {
             </p>
             <Button
               size="lg"
-              className="bg-white text-purple-900 hover:bg-gray-300 transition duration-500 ease-in-out"
+              className="pt-6 pb-6 w-full bg-white text-purple-900 hover:bg-gray-300 transition duration-500 ease-in-out"
             >
-              <Link href={"https://bit.ly/3PJKpnA"}>
+              <Link href={"https://bit.ly/3PJKpnA"} className="font-bold">
                 지금 바로 커피챗 예약하기
               </Link>
             </Button>
