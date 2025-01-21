@@ -8,7 +8,6 @@ import {
   Share2,
   Clock,
   Target,
-  Sparkles,
   MagnetIcon as Magic,
   Lock,
 } from "lucide-react";
@@ -45,9 +44,7 @@ export default function LandingPage() {
                 size="lg"
                 className="text-xl bg-purple-600 hover:bg-purple-700 w-full pt-8 pb-8 duration-500 ease-in-out font-bold"
               >
-                <Link href={"https://bit.ly/3PJKpnA"}>
-                  제작 상담 예약하기
-                </Link>
+                <Link href={"https://bit.ly/3PJKpnA"}>제작 상담 예약하기</Link>
               </Button>
             </div>
           </div>
@@ -86,8 +83,7 @@ export default function LandingPage() {
             {
               icon: <Target className="w-8 h-8" />,
               title: "맞춤형 답변",
-              description:
-                "고객에게 질문 의도와 맥락에 맞는 최적의 답변 제공",
+              description: "고객에게 질문 의도와 맥락에 맞는 최적의 답변 제공",
             },
             {
               icon: <Lock className="w-8 h-8" />,
