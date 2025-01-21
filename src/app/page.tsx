@@ -242,9 +242,9 @@ export default function LandingPage() {
         <div className="container mx-auto text-center">
           <p>&copy; 2025 AutoEgo. All rights reserved.</p>
           <div className="flex justify-center space-x-4 mt-4">
-            <Link href="/privacy-policy">Privacy Policy</Link>
-            <Link href="/terms-of-service">Terms of Service</Link>
-            <Link href="/contact">Contact</Link>
+            <p>Privacy Policy</p>
+            <p>Terms of Service</p>
+            <p>Contact: 010-4718-8591 고성현</p>
           </div>
         </div>
       </footer>
