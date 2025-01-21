@@ -10,6 +10,7 @@ import {
   Target,
   Sparkles,
   MagnetIcon as Magic,
+  Lock,
 } from "lucide-react";
 import { Ubuntu } from "next/font/google";
 
@@ -33,11 +34,10 @@ export default function LandingPage() {
                 AutoEgo
               </h1>
               <p className="text-2xl font-bold tracking-tight bg-gradient-to-r from-purple-400 to-pink-600 bg-clip-text text-transparent">
-                당신의 지식이 24시간 일하게 하세요.
+                크리에이터의 지식이 24시간 일하는 곳.
               </p>
               <p className="text-xl text-gray-400">
-                자료만 업로드하면, AutoEgo가 당신의 지식을 기반으로 질문에
-                답변하는 개인화된 챗봇을 자동으로 생성합니다.
+                당신의 지식 기반 챗봇으로 수익을 극대화하세요.
               </p>
             </div>
             <div className="mt-8">
@@ -46,7 +46,7 @@ export default function LandingPage() {
                 className="text-xl bg-purple-600 hover:bg-purple-700 w-full pt-8 pb-8 duration-500 ease-in-out font-bold"
               >
                 <Link href={"https://bit.ly/3PJKpnA"}>
-                  지금 바로 커피챗 예약하기
+                  제작 상담 예약하기
                 </Link>
               </Button>
             </div>
@@ -70,32 +70,34 @@ export default function LandingPage() {
         <div className="text-center space-y-4 mb-16">
           <h2 className="text-3xl lg:text-5xl font-bold">무엇이 특별할까요?</h2>
           <p className="text-xl text-gray-400">
-            당신의 시간은 소중합니다. AutoEgo와 함께 더 효율적으로 일하고, 더
-            가치 있는 일에 집중하세요.
+            당신의 시간은 소중합니다.
+            <br />
+            AutoEgo와 함께 더 효율적으로 일하고, 더 많은 고객을 확보하세요.
+            <br />
           </p>
         </div>
         <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
           {[
             {
               icon: <Clock className="w-8 h-8" />,
-              title: "시간 절약",
-              description: "반복적인 질문에 대한 답변 시간 획기적 단축",
+              title: "업무 자동화",
+              description: "반복적인 질문에 대한 답변 시간 단축",
             },
             {
               icon: <Target className="w-8 h-8" />,
               title: "맞춤형 답변",
               description:
-                "RAG 기술로 질문 의도와 맥락에 맞는 최적의 답변 제공",
+                "고객에게 질문 의도와 맥락에 맞는 최적의 답변 제공",
             },
             {
-              icon: <Sparkles className="w-8 h-8" />,
-              title: "편리한 사용",
-              description: "누구나 쉽게 챗봇을 제작하고 공유 가능",
+              icon: <Lock className="w-8 h-8" />,
+              title: "보안",
+              description: "강의 자료 유출 방지",
             },
             {
               icon: <Magic className="w-8 h-8" />,
-              title: "개인화된 경험",
-              description: "사용자별 맞춤형 챗봇으로 차별화된 경험 제공",
+              title: "초개인화 제작",
+              description: "원하는대로 맞춤형 개발",
             },
           ].map((benefit, index) => (
             <Card key={index} className="bg-gray-900 border-gray-800">
@@ -114,27 +116,27 @@ export default function LandingPage() {
       {/* How It Works Section */}
       <section className="container px-4 py-24 mx-auto">
         <div className="text-center space-y-4 mb-16">
-          <h2 className="text-3xl lg:text-5xl font-bold">어떻게 작동하나요?</h2>
+          <h2 className="text-3xl lg:text-5xl font-bold">제작 프로세스</h2>
           <p className="text-xl text-gray-400">
-            간단한 3단계로 나만의 AI 챗봇을 만들고 공유하세요.
+            간단한 3단계로 나만의 AI 챗봇을 만들어보세요.
           </p>
         </div>
         <div className="grid md:grid-cols-3 gap-8">
           {[
             {
               icon: <Upload className="w-12 h-12" />,
-              title: "자료 업로드",
-              description: "텍스트, PDF, 웹페이지 등 다양한 자료 업로드",
+              title: "자료 전달",
+              description: "강의 대본, PDF, 영상 등 다양한 자료 가능",
             },
             {
               icon: <MessageSquare className="w-12 h-12" />,
-              title: "챗봇 생성",
-              description: "업로드된 자료 기반으로 RAG 챗봇 자동 생성",
+              title: "전문 개발진 챗봇 제작",
+              description: "전달받은 자료 기반으로 챗봇 제작",
             },
             {
               icon: <Share2 className="w-12 h-12" />,
-              title: "URL 공유",
-              description: "생성된 챗봇 URL을 통해 누구나 챗봇 이용 가능",
+              title: "공유",
+              description: "생성된 챗봇을 웹이나 앱으로 공유",
             },
           ].map((step, index) => (
             <div key={index} className="relative">
@@ -167,20 +169,20 @@ export default function LandingPage() {
           {[
             {
               title: "온라인 강의 강사",
-              description: "강의 자료, FAQ 업로드 후 학생들에게 챗봇 URL 제공",
-              cta: "학생들의 반복 질문, 이제 AutoEgo에게 맡기세요! 강의 자료만 업로드하면 AI 챗봇이 24시간 답변해드립니다.",
+              description: "강의 자료, FAQ 업로드 후 학생들에게 챗봇 제공",
+              cta: "학생들의 반복 질문, 이제 AutoEgo에게 맡기세요!",
               image: "/undraw_teaching_58yg.svg",
             },
             {
               title: "콘텐츠 크리에이터",
               description: "콘텐츠 아카이브를 기반으로 팬들과의 소통 자동화",
-              cta: "팬들의 질문에 24시간 답변하세요. 당신의 콘텐츠를 AI 챗봇이 완벽하게 이해합니다.",
+              cta: "팬들에게 맞춤형 답변을 선물하세요.",
               image: "/undraw_fans_icv6.svg",
             },
             {
-              title: "보험 판매원",
-              description: "상품 정보와 FAQ를 기반으로 고객 상담 자동화",
-              cta: "복잡한 보험 상품 설명, AI 챗봇이 완벽하게 처리합니다. 실제 상담에만 집중하세요.",
+              title: "코치",
+              description: "1대1 코칭 자동화",
+              cta: "당신의 지식을 기반으로 코칭 업무를 자동 처리합니다.",
               image: "/undraw_chat-bot_44el.svg",
             },
           ].map((useCase, index) => (
@@ -234,7 +236,7 @@ export default function LandingPage() {
               className="pt-6 pb-6 w-full bg-white text-purple-900 hover:bg-gray-300 transition duration-500 ease-in-out"
             >
               <Link href={"https://bit.ly/3PJKpnA"} className="font-bold">
-                지금 바로 커피챗 예약하기
+                제작 상담 예약하기
               </Link>
             </Button>
           </CardContent>
