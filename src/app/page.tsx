@@ -44,7 +44,7 @@ export default function LandingPage() {
                 size="lg"
                 className="text-xl bg-purple-600 hover:bg-purple-700 w-full pt-8 pb-8 duration-500 ease-in-out font-bold"
               >
-                <Link href={"https://bit.ly/3PJKpnA"}>제작 상담 예약하기</Link>
+                <Link href={"https://docs.google.com/forms/d/e/1FAIpQLSfIEoy3R2w6hgj0S8ryXnr4jxwyGY3FB3BUKSYq-f_pi0272w/viewform?usp=sharing"}>제작 상담 예약하기</Link>
               </Button>
             </div>
           </div>
