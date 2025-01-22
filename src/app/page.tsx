@@ -12,6 +12,7 @@ import {
   Lock,
 } from "lucide-react";
 import { Ubuntu } from "next/font/google";
+import { Play } from "lucide-react";
 
 const ubuntu = Ubuntu({
   weight: ["300", "400", "500", "700"], // 사용할 굵기 지정
@@ -49,14 +50,24 @@ export default function LandingPage() {
             </div>
           </div>
           <div className="relative">
-            <Link href="https://www.youtube.com/watch?v=-eOKS3KyGtw">
-              <Image
-                src="https://img.youtube.com/vi/-eOKS3KyGtw/maxresdefault.jpg"
-                alt="AutoEgo Interface"
-                className="rounded-lg shadow-2xl"
-                width={1280}
-                height={720}
-              />
+            <Link
+              href="https://www.youtube.com/watch?v=3qaYurEIf5s"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              <div className="relative">
+                <Image
+                  src="https://img.youtube.com/vi/3qaYurEIf5s/maxresdefault.jpg"
+                  alt="AutoEgo Interface"
+                  className="rounded-lg shadow-2xl filter blur-sm"
+                  width={1280}
+                  height={720}
+                />
+
+                <div className="absolute inset-0 flex items-center justify-center">
+                  <Play className="w-16 h-16 text-white bg-black bg-opacity-20 rounded-full p-2" />
+                </div>
+              </div>
             </Link>
           </div>
         </div>
