@@ -82,8 +82,8 @@ export default function LandingPage() {
             },
             {
               icon: <Target className="w-8 h-8" />,
-              title: "맞춤형 답변",
-              description: "고객에게 질문 의도와 맥락에 맞는 최적의 답변 제공",
+              title: "수강생 질문 데이터",
+              description: "수강생 질문 데이터 관리 대시보드",
             },
             {
               icon: <Lock className="w-8 h-8" />,
@@ -231,7 +231,7 @@ export default function LandingPage() {
               size="lg"
               className="pt-6 pb-6 w-full bg-white text-purple-900 hover:bg-gray-300 transition duration-500 ease-in-out"
             >
-              <Link href={"https://bit.ly/3PJKpnA"} className="font-bold">
+              <Link href={"https://docs.google.com/forms/d/e/1FAIpQLSfIEoy3R2w6hgj0S8ryXnr4jxwyGY3FB3BUKSYq-f_pi0272w/viewform?usp=sharingㅍ"} className="font-bold">
                 제작 상담 예약하기
               </Link>
             </Button>
