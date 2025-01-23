@@ -1,7 +1,6 @@
-import Image from "next/image";
-import Link from "next/link";
-import { Button } from "@/components/ui/button";
-import { Card, CardContent } from "@/components/ui/card";
+import Image from 'next/image';
+import {Card, CardContent} from '@/components/ui/card';
+import ContactButton from '@/components/contact-button';
 import {
   Upload,
   MessageSquare,
@@ -10,13 +9,13 @@ import {
   Target,
   MagnetIcon as Magic,
   Lock,
-} from "lucide-react";
-import { Ubuntu } from "next/font/google";
+} from 'lucide-react';
+import {Ubuntu} from 'next/font/google';
 
 const ubuntu = Ubuntu({
-  weight: ["300", "400", "500", "700"], // 사용할 굵기 지정
-  subsets: ["latin"], // 사용할 서브셋 지정 (한글 사용 시 'korean' 추가)
-  display: "swap", // 폰트 로딩 전략 (optional, 성능 최적화)
+  weight: ['300', '400', '500', '700'], // 사용할 굵기 지정
+  subsets: ['latin'], // 사용할 서브셋 지정 (한글 사용 시 'korean' 추가)
+  display: 'swap', // 폰트 로딩 전략 (optional, 성능 최적화)
 });
 
 export default function LandingPage() {
@@ -40,12 +39,11 @@ export default function LandingPage() {
               </p>
             </div>
             <div className="mt-8">
-              <Button
-                size="lg"
+              <ContactButton
                 className="text-xl bg-purple-600 hover:bg-purple-700 w-full pt-8 pb-8 duration-500 ease-in-out font-bold"
-              >
-                <Link href={"https://docs.google.com/forms/d/e/1FAIpQLSfIEoy3R2w6hgj0S8ryXnr4jxwyGY3FB3BUKSYq-f_pi0272w/viewform?usp=sharing"}>제작 상담 예약하기</Link>
-              </Button>
+                buttonLabel="제작 상담 예약하기"
+                trackLabel="Contact Link Clicked"
+              />
             </div>
           </div>
           <div className="relative">
@@ -54,7 +52,6 @@ export default function LandingPage() {
               height="315"
               src="https://www.youtube.com/embed/3qaYurEIf5s"
               title="AutoEgo 소개"
-              frameBorder="0"
               allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
               allowFullScreen
             ></iframe>
@@ -77,23 +74,23 @@ export default function LandingPage() {
           {[
             {
               icon: <Clock className="w-8 h-8" />,
-              title: "업무 자동화",
-              description: "반복적인 질문에 대한 답변 시간 단축",
+              title: '업무 자동화',
+              description: '반복적인 질문에 대한 답변 시간 단축',
             },
             {
               icon: <Target className="w-8 h-8" />,
-              title: "수강생 질문 데이터",
-              description: "수강생 질문 데이터 관리 대시보드",
+              title: '수강생 질문 데이터',
+              description: '수강생 질문 데이터 관리 대시보드',
             },
             {
               icon: <Lock className="w-8 h-8" />,
-              title: "보안",
-              description: "강의 자료 유출 방지",
+              title: '보안',
+              description: '강의 자료 유출 방지',
             },
             {
               icon: <Magic className="w-8 h-8" />,
-              title: "초개인화 제작",
-              description: "원하는대로 맞춤형 개발",
+              title: '초개인화 제작',
+              description: '원하는대로 맞춤형 개발',
             },
           ].map((benefit, index) => (
             <Card key={index} className="bg-gray-900 border-gray-800">
@@ -121,18 +118,18 @@ export default function LandingPage() {
           {[
             {
               icon: <Upload className="w-12 h-12" />,
-              title: "자료 전달",
-              description: "강의 대본, PDF, 영상 등 다양한 자료 가능",
+              title: '자료 전달',
+              description: '강의 대본, PDF, 영상 등 다양한 자료 가능',
             },
             {
               icon: <MessageSquare className="w-12 h-12" />,
-              title: "전문 개발진 챗봇 제작",
-              description: "전달받은 자료 기반으로 챗봇 제작",
+              title: '전문 개발진 챗봇 제작',
+              description: '전달받은 자료 기반으로 챗봇 제작',
             },
             {
               icon: <Share2 className="w-12 h-12" />,
-              title: "공유",
-              description: "생성된 챗봇을 웹이나 앱으로 공유",
+              title: '공유',
+              description: '생성된 챗봇을 웹이나 앱으로 공유',
             },
           ].map((step, index) => (
             <div key={index} className="relative">
@@ -164,22 +161,22 @@ export default function LandingPage() {
         <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
           {[
             {
-              title: "온라인 강의 강사",
-              description: "강의 자료, FAQ 업로드 후 학생들에게 챗봇 제공",
-              cta: "학생들의 반복 질문, 이제 AutoEgo에게 맡기세요!",
-              image: "/undraw_teaching_58yg.svg",
+              title: '온라인 강의 강사',
+              description: '강의 자료, FAQ 업로드 후 학생들에게 챗봇 제공',
+              cta: '학생들의 반복 질문, 이제 AutoEgo에게 맡기세요!',
+              image: '/undraw_teaching_58yg.svg',
             },
             {
-              title: "콘텐츠 크리에이터",
-              description: "콘텐츠 아카이브를 기반으로 팬들과의 소통 자동화",
-              cta: "팬들에게 맞춤형 답변을 선물하세요.",
-              image: "/undraw_fans_icv6.svg",
+              title: '콘텐츠 크리에이터',
+              description: '콘텐츠 아카이브를 기반으로 팬들과의 소통 자동화',
+              cta: '팬들에게 맞춤형 답변을 선물하세요.',
+              image: '/undraw_fans_icv6.svg',
             },
             {
-              title: "코치",
-              description: "1대1 코칭 자동화",
-              cta: "당신의 지식을 기반으로 코칭 업무를 자동 처리합니다.",
-              image: "/undraw_chat-bot_44el.svg",
+              title: '코치',
+              description: '1대1 코칭 자동화',
+              cta: '당신의 지식을 기반으로 코칭 업무를 자동 처리합니다.',
+              image: '/undraw_chat-bot_44el.svg',
             },
           ].map((useCase, index) => (
             <Card
@@ -188,13 +185,13 @@ export default function LandingPage() {
             >
               <div className="w-full">
                 <Image
-                  src={useCase.image || "/placeholder.svg"}
+                  src={useCase.image || '/placeholder.svg'}
                   alt={useCase.title}
                   width={400}
                   height={300}
                   style={{
-                    height: "300px",
-                    objectPosition: "top",
+                    height: '300px',
+                    objectPosition: 'top',
                   }}
                   className="w-full object-cover pt-12 pb-12 pl-8 pr-8"
                 />
@@ -227,14 +224,11 @@ export default function LandingPage() {
             <p className="text-xl text-gray-200 max-w-2xl mx-auto">
               AutoEgo와 함께 더 스마트하게 일하고, 더 많은 가치를 창출하세요.
             </p>
-            <Button
-              size="lg"
-              className="pt-6 pb-6 w-full bg-white text-purple-900 hover:bg-gray-300 transition duration-500 ease-in-out"
-            >
-              <Link href={"https://docs.google.com/forms/d/e/1FAIpQLSfIEoy3R2w6hgj0S8ryXnr4jxwyGY3FB3BUKSYq-f_pi0272w/viewform?usp=sharingㅍ"} className="font-bold">
-                제작 상담 예약하기
-              </Link>
-            </Button>
+            <ContactButton
+              className="pt-6 pb-6 w-full bg-white text-purple-900 hover:bg-gray-300 transition duration-500 ease-in-out font-bold"
+              buttonLabel="제작 상담 예약하기"
+              trackLabel="Contact Link Clicked"
+            />
           </CardContent>
         </Card>
       </section>
