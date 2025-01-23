@@ -1,9 +1,9 @@
-'use client';
-
+import React, { ReactNode } from 'react';
 import { motion } from 'framer-motion';
 import { useInView } from 'react-intersection-observer';
 
-const Section = ({ children }) => {
+// Section 컴포넌트
+const Section: React.FC<{ children: ReactNode }> = ({ children }) => {
   const { ref, inView } = useInView({
     triggerOnce: true,
     threshold: 0.1,
