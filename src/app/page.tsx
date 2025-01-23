@@ -42,7 +42,6 @@ export default function LandingPage() {
               <ContactButton
                 className="text-xl bg-purple-600 hover:bg-purple-700 w-full pt-8 pb-8 duration-500 ease-in-out font-bold"
                 buttonLabel="제작 상담 예약하기"
-                trackLabel="Contact Link Clicked"
               />
             </div>
           </div>
@@ -227,8 +226,8 @@ export default function LandingPage() {
             <ContactButton
               className="pt-6 pb-6 w-full bg-white text-purple-900 hover:bg-gray-300 transition duration-500 ease-in-out font-bold"
               buttonLabel="제작 상담 예약하기"
-              trackLabel="Contact Link Clicked"
             />
+            ``
           </CardContent>
         </Card>
       </section>
