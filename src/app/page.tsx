@@ -1,6 +1,9 @@
+'use client';
+
 import Image from 'next/image';
-import {Card, CardContent} from '@/components/ui/card';
+import { Card, CardContent } from '@/components/ui/card';
 import ContactButton from '@/components/contact-button';
+import Section from '@/components/section';
 import {
   Upload,
   MessageSquare,
@@ -10,7 +13,8 @@ import {
   MagnetIcon as Magic,
   Lock,
 } from 'lucide-react';
-import {Ubuntu} from 'next/font/google';
+import { motion } from 'framer-motion';
+import { Ubuntu } from 'next/font/google';
 
 const ubuntu = Ubuntu({
   weight: ['300', '400', '500', '700'], // 사용할 굵기 지정
@@ -22,7 +26,7 @@ export default function LandingPage() {
   return (
     <div className="min-h-screen bg-black text-white">
       {/* Hero Section */}
-      <section className="container px-4 py-24 mx-auto">
+      <Section>
         <div className="grid lg:grid-cols-2 gap-12 items-center">
           <div className="h-full flex flex-col justify-between">
             <div className="space-y-6">
@@ -56,10 +60,10 @@ export default function LandingPage() {
             ></iframe>
           </div>
         </div>
-      </section>
+      </Section>
 
       {/* Benefits Section */}
-      <section className="container px-4 py-24 mx-auto">
+      <Section>
         <div className="text-center space-y-4 mb-16">
           <h2 className="text-3xl lg:text-5xl font-bold">무엇이 특별할까요?</h2>
           <p className="text-xl text-gray-400">
@@ -92,21 +96,27 @@ export default function LandingPage() {
               description: '원하는대로 맞춤형 개발',
             },
           ].map((benefit, index) => (
-            <Card key={index} className="bg-gray-900 border-gray-800">
-              <CardContent className="p-6 space-y-4">
-                <div className="text-purple-400">{benefit.icon}</div>
-                <h3 className="text-xl font-bold text-white">
-                  {benefit.title}
-                </h3>
-                <p className="text-gray-400">{benefit.description}</p>
-              </CardContent>
-            </Card>
+            <motion.div
+              whileHover={{ scale: 1.05 }}
+              whileTap={{ scale: 0.95 }}
+              key={index}
+            >
+              <Card className="bg-gray-900 border-gray-800 transform transition-all duration-300 hover:bg-gray-800">
+                <CardContent className="p-6 space-y-4">
+                  <div className="text-purple-400">{benefit.icon}</div>
+                  <h3 className="text-xl font-bold text-white">
+                    {benefit.title}
+                  </h3>
+                  <p className="text-gray-400">{benefit.description}</p>
+                </CardContent>
+              </Card>
+            </motion.div>
           ))}
         </div>
-      </section>
+      </Section>
 
       {/* How It Works Section */}
-      <section className="container px-4 py-24 mx-auto">
+      <Section>
         <div className="text-center space-y-4 mb-16">
           <h2 className="text-3xl lg:text-5xl font-bold">제작 프로세스</h2>
           <p className="text-xl text-gray-400">
@@ -145,10 +155,10 @@ export default function LandingPage() {
             </div>
           ))}
         </div>
-      </section>
+      </Section>
 
       {/* Use Cases Section */}
-      <section className="container px-4 py-24 mx-auto">
+      <Section>
         <div className="text-center space-y-4 mb-16">
           <h2 className="text-3xl lg:text-5xl font-bold">
             어떻게 활용할 수 있을까요?
@@ -178,59 +188,57 @@ export default function LandingPage() {
               image: '/undraw_chat-bot_44el.svg',
             },
           ].map((useCase, index) => (
-            <Card
+            <motion.div
+              whileHover={{ y: -10 }}
+              transition={{ type: 'spring', stiffness: 300 }}
               key={index}
-              className="bg-gray-900 border-gray-800 overflow-hidden"
             >
-              <div className="w-full">
-                <Image
-                  src={useCase.image || '/placeholder.svg'}
-                  alt={useCase.title}
-                  width={400}
-                  height={300}
-                  style={{
-                    height: '300px',
-                    objectPosition: 'top',
-                  }}
-                  className="w-full object-cover pt-12 pb-12 pl-8 pr-8"
-                />
-              </div>
-              <CardContent className="p-6 space-y-4">
-                <h3 className="text-xl font-bold text-white">
-                  {useCase.title}
-                </h3>
-                <p className="text-gray-400">{useCase.description}</p>
-                <p className="text-sm text-purple-400">{useCase.cta}</p>
-                {/* <Button
-                  variant="outline"
-                  className="w-full border-purple-600 text-purple-400"
-                >
-                  자세히 알아보기
-                </Button> */}
-              </CardContent>
-            </Card>
+              <Card className="bg-gray-900 border-gray-800 overflow-hidden hover:shadow-lg hover:shadow-purple-500/20">
+                <div className="w-full">
+                  <Image
+                    src={useCase.image || '/placeholder.svg'}
+                    alt={useCase.title}
+                    width={400}
+                    height={300}
+                    style={{
+                      height: '300px',
+                      objectPosition: 'top',
+                    }}
+                    className="w-full object-cover pt-12 pb-12 pl-8 pr-8"
+                  />
+                </div>
+                <CardContent className="p-6 space-y-4">
+                  <h3 className="text-xl font-bold text-white">
+                    {useCase.title}
+                  </h3>
+                  <p className="text-gray-400">{useCase.description}</p>
+                  <p className="text-sm text-purple-400">{useCase.cta}</p>
+                </CardContent>
+              </Card>
+            </motion.div>
           ))}
         </div>
-      </section>
+      </Section>
 
       {/* CTA Section */}
-      <section className="container px-4 py-24 mx-auto">
-        <Card className="bg-gradient-to-r from-purple-900 to-pink-900 border-0 flex items-center justify-center">
-          <CardContent className="p-12 text-center space-y-6 max-w-xl">
-            <h2 className="text-3xl lg:text-5xl font-bold text-white">
-              지금 바로 시작하세요
-            </h2>
-            <p className="text-xl text-gray-200 max-w-2xl mx-auto">
-              AutoEgo와 함께 더 스마트하게 일하고, 더 많은 가치를 창출하세요.
-            </p>
-            <ContactButton
-              className="pt-6 pb-6 w-full bg-white text-purple-900 hover:bg-gray-300 transition duration-500 ease-in-out font-bold"
-              buttonLabel="제작 상담 예약하기"
-            />
-            ``
-          </CardContent>
-        </Card>
-      </section>
+      <Section>
+        <motion.div whileHover={{ scale: 1.02 }} whileTap={{ scale: 0.98 }}>
+          <Card className="bg-gradient-to-r from-purple-900 to-pink-900 border-0 flex items-center justify-center">
+            <CardContent className="p-12 text-center space-y-6 max-w-xl">
+              <h2 className="text-3xl lg:text-5xl font-bold text-white">
+                지금 바로 시작하세요
+              </h2>
+              <p className="text-xl text-gray-200 max-w-2xl mx-auto">
+                AutoEgo와 함께 더 스마트하게 일하고, 더 많은 가치를 창출하세요.
+              </p>
+              <ContactButton
+                className="pt-6 pb-6 w-full bg-white text-purple-900 hover:bg-gray-300 transition duration-500 ease-in-out font-bold"
+                buttonLabel="제작 상담 예약하기"
+              />
+            </CardContent>
+          </Card>
+        </motion.div>
+      </Section>
       <footer className="bg-black text-gray-400 py-8">
         <div className="container mx-auto text-center">
           <p>&copy; 2025 AutoEgo. All rights reserved.</p>
