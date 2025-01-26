@@ -27,37 +27,24 @@ export default function LandingPage() {
     <div className="min-h-screen bg-black text-white">
       {/* Hero Section */}
       <Section>
-        <div className="grid lg:grid-cols-2 gap-12 items-center">
-          <div className="h-full flex flex-col justify-between">
-            <div className="space-y-6">
-              <h1
-                className={`text-6xl lg:text-8xl font-bold tracking-tight bg-gradient-to-r from-purple-400 to-pink-600 bg-clip-text text-transparent ${ubuntu.className} pb-2`}
-              >
-                AutoEgo
-              </h1>
-              <p className="text-2xl font-bold tracking-tight bg-gradient-to-r from-purple-400 to-pink-600 bg-clip-text text-transparent">
-                크리에이터의 지식이 24시간 일하는 곳.
-              </p>
-              <p className="text-xl text-gray-400">
-                당신의 지식 기반 챗봇으로 수익을 극대화하세요.
-              </p>
-            </div>
-            <div className="mt-8">
+        <div className="flex flex-col justify-center min-h-[70vh]">
+          <div className="space-y-8 text-center">
+            <h1
+              className={`text-7xl lg:text-9xl font-bold tracking-tight bg-gradient-to-r from-purple-400 to-pink-600 bg-clip-text text-transparent ${ubuntu.className} pb-2`}
+            >
+              AutoEgo
+            </h1>
+            <p className="text-3xl lg:text-4xl font-bold tracking-tight bg-gradient-to-r from-purple-400 to-pink-600 bg-clip-text text-transparent">
+              수익창출 없는 GPTs는 이제 그만!
+              <br />
+              당신의 지식 기반 챗봇으로 수익을 창출하세요
+            </p>
+            <div className="mt-12 flex justify-center">
               <ContactButton
-                className="text-xl bg-purple-600 hover:bg-purple-700 w-full pt-8 pb-8 duration-500 ease-in-out font-bold"
-                buttonLabel="제작 상담 예약하기"
+                className="text-xl bg-purple-600 hover:bg-purple-700 px-16 py-6 duration-500 ease-in-out font-bold"
+                buttonLabel="수익화 챗봇 제작 예약하기"
               />
             </div>
-          </div>
-          <div className="relative">
-            <iframe
-              width="100%"
-              height="315"
-              src="https://www.youtube.com/embed/3qaYurEIf5s"
-              title="AutoEgo 소개"
-              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-              allowFullScreen
-            ></iframe>
           </div>
         </div>
       </Section>
@@ -65,11 +52,13 @@ export default function LandingPage() {
       {/* Benefits Section */}
       <Section>
         <div className="text-center space-y-4 mb-16">
-          <h2 className="text-3xl lg:text-5xl font-bold">무엇이 특별할까요?</h2>
+          <h2 className="text-3xl lg:text-5xl font-bold">
+            GPTs와 무엇이 다를까요?
+          </h2>
           <p className="text-xl text-gray-400">
-            당신의 시간은 소중합니다.
+            GPTs는 수익창출이 없습니다.
             <br />
-            AutoEgo와 함께 더 효율적으로 일하고, 더 많은 고객을 확보하세요.
+            AutoEgo와 함께 만들고, 수익을 창출하세요.
             <br />
           </p>
         </div>
@@ -77,23 +66,23 @@ export default function LandingPage() {
           {[
             {
               icon: <Clock className="w-8 h-8" />,
-              title: '업무 자동화',
-              description: '반복적인 질문에 대한 답변 시간 단축',
+              title: '결제',
+              description: '구독형 결제 모듈 제공',
             },
             {
               icon: <Target className="w-8 h-8" />,
-              title: '수강생 질문 데이터',
-              description: '수강생 질문 데이터 관리 대시보드',
+              title: '질문 데이터',
+              description: '질문 데이터 관리 대시보드',
             },
             {
               icon: <Lock className="w-8 h-8" />,
               title: '보안',
-              description: '강의 자료 유출 방지',
+              description: '학습 데이터 유출 방지',
             },
             {
               icon: <Magic className="w-8 h-8" />,
               title: '초개인화 제작',
-              description: '원하는대로 맞춤형 개발',
+              description: '앱/웹 맞춤형 개발',
             },
           ].map((benefit, index) => (
             <motion.div
@@ -120,7 +109,7 @@ export default function LandingPage() {
         <div className="text-center space-y-4 mb-16">
           <h2 className="text-3xl lg:text-5xl font-bold">제작 프로세스</h2>
           <p className="text-xl text-gray-400">
-            간단한 3단계로 나만의 AI 챗봇을 만들어보세요.
+            간단한 3단계로 수익화 AI 챗봇을 만들어보세요.
           </p>
         </div>
         <div className="grid md:grid-cols-3 gap-8">
@@ -128,12 +117,12 @@ export default function LandingPage() {
             {
               icon: <Upload className="w-12 h-12" />,
               title: '자료 전달',
-              description: '강의 대본, PDF, 영상 등 다양한 자료 가능',
+              description: '강의 대본, PDF, 영상 등 학습데이터',
             },
             {
               icon: <MessageSquare className="w-12 h-12" />,
               title: '전문 개발진 챗봇 제작',
-              description: '전달받은 자료 기반으로 챗봇 제작',
+              description: '신속한 챗봇 제작',
             },
             {
               icon: <Share2 className="w-12 h-12" />,
@@ -161,30 +150,30 @@ export default function LandingPage() {
       <Section>
         <div className="text-center space-y-4 mb-16">
           <h2 className="text-3xl lg:text-5xl font-bold">
-            어떻게 활용할 수 있을까요?
+            어떻게 수익화 할까요?
           </h2>
           <p className="text-xl text-gray-400">
-            AutoEgo는 다양한 분야에서 활용되어 당신의 업무 효율성을 높여줍니다.
+            AutoEgo는 다양한 상품과 함께 수익을 창출할 수 있습니다.
           </p>
         </div>
         <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
           {[
             {
               title: '온라인 강의 강사',
-              description: '강의 자료, FAQ 업로드 후 학생들에게 챗봇 제공',
-              cta: '학생들의 반복 질문, 이제 AutoEgo에게 맡기세요!',
+              description: '수강생에게 챗봇 제공',
+              cta: '강의와 함께 팔 수 있습니다.',
               image: '/undraw_teaching_58yg.svg',
             },
             {
-              title: '콘텐츠 크리에이터',
-              description: '콘텐츠 아카이브를 기반으로 팬들과의 소통 자동화',
-              cta: '팬들에게 맞춤형 답변을 선물하세요.',
+              title: '크리에이터',
+              description: '팬들과의 소통 자동화',
+              cta: '팬들에게 개인화 커뮤니티을 선물하세요.',
               image: '/undraw_fans_icv6.svg',
             },
             {
               title: '코치',
               description: '1대1 코칭 자동화',
-              cta: '당신의 지식을 기반으로 코칭 업무를 자동 처리합니다.',
+              cta: '코칭 상품에 추가되어 판매할 수 있습니다.',
               image: '/undraw_chat-bot_44el.svg',
             },
           ].map((useCase, index) => (
@@ -229,7 +218,7 @@ export default function LandingPage() {
                 지금 바로 시작하세요
               </h2>
               <p className="text-xl text-gray-200 max-w-2xl mx-auto">
-                AutoEgo와 함께 더 스마트하게 일하고, 더 많은 가치를 창출하세요.
+                AutoEgo와 함께 수익화에 도전하세요.
               </p>
               <ContactButton
                 className="pt-6 pb-6 w-full bg-white text-purple-900 hover:bg-gray-300 transition duration-500 ease-in-out font-bold"
